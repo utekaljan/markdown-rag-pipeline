@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "markdown-rag-pipeline"
+version = "1.0.0"
+description = "A transparent Markdown-to-Qdrant ingestion pipeline with inspectable offline artifacts."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+  { name = "Jan Utěkal" },
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+dependencies = []
+
+[project.optional-dependencies]
+qdrant = [
+  "openai==3.5.0",
+  "qdrant-client==1.19.0",
+]
+dev = [
+  "openai==3.5.0",
+  "qdrant-client==1.19.0",
+]
+
+[project.scripts]
+markdown-rag = "markdown_rag_pipeline.cli:main"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
