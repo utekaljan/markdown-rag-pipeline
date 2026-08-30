@@ -1,0 +1,21 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.DS_Store
+
+# Local review material must never become part of the public repository.
+input/local-check/
+output/local-check/
+
+# Keep private source documents and primary generated artifacts local.
+input/*
+!input/.gitkeep
+output/*
+!output/.gitkeep
