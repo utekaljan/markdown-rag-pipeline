@@ -23,11 +23,11 @@ dependencies = []
 
 [project.optional-dependencies]
 qdrant = [
-  "openai==3.5.0",
+  "openai==3.23.0",
   "qdrant-client==1.19.0",
 ]
 dev = [
-  "openai==3.5.0",
+  "openai==3.23.0",
   "qdrant-client==1.19.0",
 ]
 
